@@ -33,4 +33,4 @@
 <li>Formula/Expression Logic: 32.5</li>
 </ul>
 <p align="left">fcc Objective: Build a CodePen.io app that is functionally similar to this: </p><br>
-<p align="center"><a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank">Example link</a></p>
+<p align="center"><a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank">fcc demo link</a></p>
