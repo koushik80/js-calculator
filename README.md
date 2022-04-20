@@ -24,13 +24,13 @@
 <p>User Story 13:If 2 or more operators are entered consecutively, the operation performed should be the last operator entered (excluding the negative (-) sign). For example, if 5 + * 7 = is entered, the result should be 35 (i.e. 5 * 7); if 5 * - 5 = is entered, the result should be -25 (i.e. 5 * (-5)).</p>
 <p>User Story 14:Pressing an operator immediately following = should start a new calculation that operates on the result of the previous evaluation.</p>
 <p>User Story 15:My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places).</p>
-<h3 align="center">Note On Calculator Logic by freeCodeCamp:<h3>
-<p>It should be noted that there are two main schools of thought on calculator input logic: immediate execution logic and formula logic. Our example utilizes formula logic and observes order of operation precedence, immediate execution does not. Either is acceptable, but please note that depending on which you choose, your calculator may yield different results than ours for certain equations (see below example). As long as your math can be verified by another production calculator, please do not consider this a bug.</p>
-<h3 align="center">EXAMPLE:</h3>
-<p>3 + 5 x 6 - 2 / 4 =</p>
+<p align="left">Note On Calculator Logic by freeCodeCamp:<p>
+<p align="left">It should be noted that there are two main schools of thought on calculator input logic: immediate execution logic and formula logic. Our example utilizes formula logic and observes order of operation precedence, immediate execution does not. Either is acceptable, but please note that depending on which you choose, your calculator may yield different results than ours for certain equations (see below example). As long as your math can be verified by another production calculator, please do not consider this a bug.</p>
+<p align="left">EXAMPLE:</p>
+<p align="left">3 + 5 x 6 - 2 / 4 =</p>
 <ul>
 <li>Immediate Execution Logic: 11.5</li>
 <li>Formula/Expression Logic: 32.5</li>
 </ul>
-<h3 align="center">fcc Objective: Build a CodePen.io app that is functionally similar to this: </h3><br>
+<p align="left">fcc Objective: Build a CodePen.io app that is functionally similar to this: </p><br>
 <p align="center"><a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank">Example link</a></p>
