@@ -26,8 +26,8 @@
 <p>User Story 15:My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places).</p>
 <p align="left">Note On Calculator Logic by freeCodeCamp:<p>
 <p align="left">It should be noted that there are two main schools of thought on calculator input logic: immediate execution logic and formula logic. Our example utilizes formula logic and observes order of operation precedence, immediate execution does not. Either is acceptable, but please note that depending on which you choose, your calculator may yield different results than ours for certain equations (see below example). As long as your math can be verified by another production calculator, please do not consider this a bug.</p>
-<p align="left">EXAMPLE:</p>
-<p align="left">3 + 5 x 6 - 2 / 4 =</p>
+<p align="left">EXAMPLE: 3 + 5 x 6 - 2 / 4 = </p>
+
 <ul>
 <li>Immediate Execution Logic: 11.5</li>
 <li>Formula/Expression Logic: 32.5</li>
