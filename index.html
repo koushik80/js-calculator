@@ -14,9 +14,17 @@
   </head>
   <body>
     <div classs="container-fluid">
-    <h1>JS Calculator</h1>
+      <div class="row text-center">
+        <div class="col my-3 py-5">
+          <h1>JS Calculator</h1>
+        </div>
+      </div>
+    <div class="row text-center">
+      <div class="col">
+        <div id="display" class="bg-light text-salmon my-3 py-5">0</div>
+      </div>
+    </div>
 
-    <div id="display" class="bg-light text-center text-salmon my-3 py-5">0</div>
     <a id="equals" class="btn btn-block btn-warning">=</a>
 
     <a id="zero" class="btn btn-block btn-secondary" onclick="updateDisplay(0)">0</a>
