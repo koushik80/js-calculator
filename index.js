@@ -7,21 +7,28 @@ function updateDisplay(input) {
 
     if (display.innerHTML === "0" && opertaionOptions.indexOf(input) === -1) {
         if (input === "decimal") {
-            display.innerHTML = "0.";
+        display.innerHTML = "0.";
+        } else if (input === "negative-value") {
+        if (display.innerHTML.indexOf("-1") === -1) {
+            display.innerHTML = "-" + display.innerHTML
+        } else if (display.innerHTML.indexOf("-1" > -1)) {
+            display.innerHTML = display.innerHTML.slice(1, display.innerHTML.length);
+        }
         } else {
             display.innerHTML = input;
         }
     } else if (opertaionOptions.indexOf(input) >= 0) {
 
-        if (workingOperation === "") {
-            //Dealing without an operand
+        if (trailingResult === display.innerHTML) {
+            // Operand button pressed twice exception
+            workingOperation = input;
+        } else if (workingOperation === "") {
+            // Dealing without an operand
             workingOperation = input;
             trailingResult = display.innerHTML;
             display.innerHTML = 0;
-        } else if (trailingResult = display.innerHTML) {
-          
         } else {
-            //Dealing with a set operand
+            // Dealing with a set operand
             trailingResult = calculate(trailingResult, display.innerHTML, workingOperation);
             secondaryDisplay.innerHTML = trailingResult;
             display.innerHTML = 0;
@@ -29,16 +36,22 @@ function updateDisplay(input) {
         }
     } else if (input === "equals") {
         display.innerHTML = calculate(trailingResult, display.innerHTML, workingOperation);
-        trailingResult = display.innerHTML;
+        trailingResult = 0;
         workingOperation = "";
     } else if (input === "decimal") {
         if (display.innerHTML.indexOf(".") === -1) {
             display.innerHTML += ".";
         }
-    } else {
-        display.innerHTML += input;
+    } else if (input === "negative-value") {
+        if (display.innerHTML.indexOf("-1") === -1) {
+            display.innerHTML = "-" + display.innerHTML
+        } else if (display.innerHTML.indexOf("-1" > -1)) {
+            display.innerHTML = display.innerHTML.slice(1, display.innerHTML.length);
+        }
+    }   else {
+            display.innerHTML += input;
+        }
     }
-}
     function clearDisplay() {
         let display = document.getElementById("display");
         display.innerHTML = 0;
@@ -65,4 +78,3 @@ function updateDisplay(input) {
         }
         return result.toString();
     }
-
