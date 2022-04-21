@@ -1,6 +1,6 @@
-<div align="center"><a href="###" target="_blank">JS Calculator</a></div>
+<div align="center"><a href="https://js-calculator-koushik.netlify.app/" target="_blank">JS Calculator</a></div>
 <h1 align="center">fcc_Frontend Dev Project 4</h1><br>
-<h3 align="left">Technologies:</h3>
+<h3 align="left">Technologies u:</h3>
 <ul>
 <li>JavaScript</li>
 <li>CSS</li>
