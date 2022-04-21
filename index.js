@@ -54,6 +54,7 @@ function updateDisplay(input) {
     }
     function clearDisplay() {
         let display = document.getElementById("display");
+        trailingResult = 0;
         display.innerHTML = 0;
     }
 
