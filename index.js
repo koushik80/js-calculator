@@ -1,18 +1,35 @@
 let trailingResult = 0;
-let opertaionOptions = ['decimal', 'divide', 'multiply', 'subtract', 'add'];
+let opertaionOptions = ['divide', 'multiply', 'subtract', 'add'];
 let workingOperation = "";
 function updateDisplay(input) {
     let display = document.getElementById("display");
-
+    let secondaryDisplay = document.getElementById("secondaryDisplay");
     if (display.innerHTML === "0" && opertaionOptions.indexOf(input) === -1) {
+        if (input === "decimal") {
+        display.innerHTML = "0.";
+      } else {
         display.innerHTML = input;
+            }
     } else if (opertaionOptions.indexOf(input) >= 0) {
-        workingOperation = input;
-        trailingResult = display.innerHTML;
-        display.innerHTML = 0;
+
+        if (workingOperation === "") {
+          //Dealing without an operand
+            workingOperation = input;
+            trailingResult = display.innerHTML;
+            display.innerHTML = 0;
+        } else {
+         //Dealing with a set operand
+            trailingResult = calculate(trailingResult, display.innerHTML, workingOperation);
+            secondaryDisplay.innerHTML = trailingResult;
+            display.innerHTML = 0;
+            workingOperation = input;
+            }
     } else if (input === "equals") {
-        display.innerHTML = calculate(parseFloat(trailingResult),  parseFloat(display.innerHTML), workingOperation);
+        display.innerHTML = calculate((trailingResult), (display.innerHTML), workingOperation);
         trailingResult = display.innerHTML;
+        workingOperation = "";
+    } else if (input === "decimal") {
+        console.log('decimal clicked');
     } else {
         display.innerHTML += input;
         }
@@ -25,6 +42,8 @@ function clearDisplay() {
 
 function calculate(firstNumber, secondNumber, operation) {
     let result;
+    firstNumber = parseFloat(firstNumber);
+    secondNumber = parseFloat(secondNumber);
     switch (operation) {
       case "add":
             result = firstNumber + secondNumber;
@@ -37,10 +56,8 @@ function calculate(firstNumber, secondNumber, operation) {
         break;
       case "divide":
         result = firstNumber / secondNumber;
-        break; 
+        break;
       default:
-    
     }
     return result.toString();
-
 }

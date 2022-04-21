@@ -10,18 +10,23 @@
       <title>devHuß JS Calculator</title>
       <script src="index.js"></script>
   </head>
+  <body>
   <div>
     <div classs="container-fluid">
       <div class="row text-center">
         <div class="col my-3 py-5">
-          <h1>JS Calculator</h1>
+          <h4>JS Calculator</h4>
         </div>
       </div>
     <div class="row text-center">
-      <div class="col">
-        <div id="display" class="bg-light text-salmon my-3 py-5">0</div>
+      <div class="col-10">
+        <div id="display" class="bg-dark text-salmon my-3 py-5">0</div>
+      </div>
+      <div class="col-2">
+        <div id="secondaryDisplay" class="bg-dark text-salmon my-3 py-5">0</div>
       </div>
     </div>
+
     <div class="row text-center">
       <div class="col-4">
         <a id="zero" class="btn btn-block btn-secondary" onclick="updateDisplay(0)">0</a>
