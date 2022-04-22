@@ -2,7 +2,13 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: salmon;
+    background-color: #E7E7E7;
 }
-
+#display{
+        font-size: 3rem;
+}
+.text-decoration-none {
+    color: #4A707A;
+}
 
 

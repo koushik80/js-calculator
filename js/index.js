@@ -26,6 +26,7 @@ function updateDisplay(input) {
             // Dealing without an operand
             workingOperation = input;
             trailingResult = display.innerHTML;
+            secondaryDisplay.innerHTML = trailingResult;
             display.innerHTML = 0;
         } else {
             // Dealing with a set operand
@@ -38,6 +39,7 @@ function updateDisplay(input) {
         display.innerHTML = calculate(trailingResult, display.innerHTML, workingOperation);
         trailingResult = 0;
         workingOperation = "";
+        secondaryDisplay.innerHTML = trailingResult;
     } else if (input === "decimal") {
         if (display.innerHTML.indexOf(".") === -1) {
             display.innerHTML += ".";
@@ -54,8 +56,10 @@ function updateDisplay(input) {
     }
     function clearDisplay() {
         let display = document.getElementById("display");
+        let secondaryDisplay = document.getElementById("secondaryDisplay");
         trailingResult = 0;
         display.innerHTML = 0;
+        secondaryDisplay.innerHTML = trailingResult;
     }
 
     function calculate(firstNumber, secondNumber, operation) {
