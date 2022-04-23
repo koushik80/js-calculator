@@ -3,7 +3,8 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     color: salmon;
-    background-color: #E7E7E7;
+    align-items: center;
+    justify-content: center;
 }
 #display{
         font-size: 3rem;
@@ -14,16 +15,16 @@
 }
 
 .my-5 {
-  border: 10px solid #9B9b9b;
+  border: 8px solid #FBEEE6;
   padding: 5px;
   position: relative;
   align-items: center;
   justify-content: center;
-  height: 650px;
+  height: 550px;
   max-width: 460px;
   border-radius: 5px;
+  background-color: #E7E7E7;
 }
-
 .logo {
     height: 30px;
     width: 30px;
@@ -35,3 +36,14 @@
     text-align: center;
 }
 
+.full-width {
+    width: 100%;
+}
+
+.mt-2 {
+  border: none;
+  font-size: 28px;
+  text-align: center;
+  justify-content: center;
+  padding: 0 2px 5px;
+}
