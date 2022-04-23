@@ -35,33 +35,3 @@
     text-align: center;
 }
 
-.col-4 {
-  gap: 5px;
-  padding: 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.btn-danger {
-  grid-column-end: 3;
-  grid-column-start: 1;
-}
-
-.btn-secondary {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-.btn-success {
-  grid-row: 4/6;
-  grid-column: 4/4;
-}
-
-.btn-warning {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-.col {
-    float: inline-end;
-}
-
-
